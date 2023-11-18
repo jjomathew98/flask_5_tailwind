@@ -7,7 +7,7 @@
 #### For this assignment I created a cloud CDN in Azure by following the steps mentioned below:
 
 ##### a. Sign in Azure with credentials
-##### b. Search ==highlight== storage
+##### b. Search storage <mark >sorage</mark>  
 ##### c. click create
 ##### d. Select subscription and resource group we would keep all other settings to be the same, we create Storage account name and press create
 under overview, click on Security, Make sure Secure transfer required, Allow Blob anonymous access, and Allow storage account key access are enabled
