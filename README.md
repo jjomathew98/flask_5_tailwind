@@ -1,7 +1,7 @@
 # flask_5_tailwind
 
 ## 1. Video Creation or Procurement:
-#### I have chosen a 1 minute video of Public service announcement (PSA) on Mental Health 
+I have chosen a 1 minute video of Public service announcement (PSA) on Mental Health 
 
 ## 2. Cloud CDN & Video Hosting:
 #### For this assignment I created a cloud CDN in Azure by following the steps mentioned below:
