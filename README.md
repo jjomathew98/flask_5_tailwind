@@ -4,18 +4,29 @@
 I have chosen a 1 minute video of Public service announcement (PSA) on Mental Health 
 
 ## 2. Cloud CDN & Video Hosting:
-#### For this assignment I created a cloud CDN in Azure by following the steps mentioned below:
+For this assignment I created a cloud CDN in Azure by following the steps mentioned below:
 
-##### a. Sign in Azure with credentials
-##### b. Search **storage accounts**
-##### c. click **create**
-##### d. Select subscription and **resource group** we would keep all other settings to be the same, we create Storage account name and press **create**
-##### e. Under overview, click on **Security**, Make sure **Secure transfer required**, **Allow Blob anonymous access**, and **Allow storage account key access** are enabled
-##### f. Under the sections **data storage**, click **containers**
-##### g. Click **+** containers, change anonymous access level to container(**anonymous read access for containers and blob**) and create a name
-##### h. Under Security + networking click Front Door and CDN
-##### i. Under service type, click Azure CDN, create new, profile name, endpoint name
-##### j. Under Query string caching behavior click Ignore Query String, press create
-##### k. Click on the name and press upload a video of choice that is less than 60 seconds
-##### l. Click on the video and copy the URL into a new tab to show that the video works.
-##### m. Using the endpoint username URL, copy everything after the .net from the video link. This link would be the outcome
+1. Sign in Azure.
+2. Go to Storage Accounts and create a new storage account.
+3. Go to Overview and click on Security. Enable the following:
+    Secure transfer required
+    Allow Blob anonymous access
+    Allow storage account key access
+4. Go to Containers and create a new container. Set the access level to Container (anonymous read access for containers and blobs).
+5. Go into the new container and upload the video file.
+6. Go to Front Door and CDN and create a new endpoint using the following configurations:
+   Service type: Azure CDN
+    Query string caching behavior: Ignore query strings
+7. Once the endpoint is deployed, click on click an open a new tab using the endpoint hostname link.
+8. In the first tab, go back to Containers and click on the container you created earlier. Then, click on the video file url and copy everything after .net/.
+9. Go back to the new tab opened in step 7 and paste the url after .net/. The video should now be displayed on the page. Copy this url as it will be used in the index.html file.
+
+## Deploying Flask App to Azure App Service 
+1. Open up Google Cloud Shell.
+2. Clone the repository using git clone and cd into the repository. Then design the flask app.
+3. Add a requirements.txt file using pip freeze > requirements.txt.
+4. In the terminal, run curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash to install Azure CLI.`
+5. Run az login and follow the instructions to login to Azure.
+6. Run az webapp up --resource-group <resource-group> --name <app-name> --runtime PYTHON:3.9 --sku B1 to deploy the app to Azure App Service. Replace <resource-group> with the resource group name and <app-name> with the app name.
+7. After the deployment, go to Azure and click on App Services. Then, click on the app you just deployed and click on the the link under Default domain. The app should now be displayed on the page.
+
